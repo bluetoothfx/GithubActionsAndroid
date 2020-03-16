@@ -1,0 +1,2 @@
+rootProject.name='GithubActionsAndroid'
+include ':app'
