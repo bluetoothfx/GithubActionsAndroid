@@ -14,6 +14,14 @@ jobs:
         ANDROID_SDK_ROOT: /root/snap/androidsdk/21
     steps:
     - uses: actions/checkout@v2
+    - name: "Android CI Github Action"
+      uses: code0987/android-ci-github-action@master
+      with:
+        args: |
+          npm install
+          export GRADLE_USER_HOME=`pwd`./src/.gradle
+          chmod 755 ./src/gradlew 
+          ./src/gradlew -p ./src check
     - name: check sdk
       run:  echo $ANDROID_SDK_ROOT
     - name: set up JDK 1.8
