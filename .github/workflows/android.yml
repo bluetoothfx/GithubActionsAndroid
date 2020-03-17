@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: self-hosted
     env:
-        ANDROID_SDK_ROOT: /root/snap/androidsdk/current/AndroidSDK/
+        ANDROID_SDK_ROOT: /snap/androidsdk/current/AndroidSDK/
     steps:
     - uses: actions/checkout@v2
     - name: check sdk
